@@ -43,9 +43,11 @@ exports.main = async (event, context) => {
   
 ```
 3. 新建云函数服务
+
 ![img_1.png](assets/cloud-option-1.png)
    
 4. 配置云函数服务
+
 ![img_2.png](assets/cloud-option-2.png)
    
 ![腾讯云函数](assets/cloud-tencent.png)
@@ -60,7 +62,7 @@ exports.main = async (event, context) => {
 
 ![img_6.png](assets/cloud-option-6.png)
 
-4. 配置完成后的云函数代码
+5. 配置完成后的云函数代码
 
 ![img_7.png](assets/cloud-option-7.png)
    
