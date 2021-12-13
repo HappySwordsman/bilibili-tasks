@@ -16,7 +16,7 @@ class CoinAdd extends Task {
             const maxNumberOfCoins = 5;
             // 视频索引
             let videoIndex = 0;
-            this.message = "#### 已投币 ";
+            this.message = `#### ${this.name}： 已投币 `;
             for (let useCoin = 0; useCoin < maxNumberOfCoins; ++useCoin) {
                 videoIndex = useCoin;
                 let videoInfo = videoList[videoIndex];
@@ -33,9 +33,12 @@ class CoinAdd extends Task {
                     videoInfo = videoList[videoIndex];
                 }
                 // 查询到最后一个视频并且是已投币状态，直接结束
-                if (videoIndex === videoList.length && isCoin) break;
+                if (videoIndex === videoList.length && isCoin) {
+                    this.message += "没有视频可以投币了"
+                    break;
+                }
                 // 投币 （无法判断进程启动时是否已投过，测试时请注释代码）
-                await this.$api.coinAddService(videoInfo.bvid, this.getCookieField("bili_jct"))
+                await this.$api.coinAddService(videoInfo.bvid, this.getCookieField("bili_jct"));
 
                 if (useCoin !== maxNumberOfCoins - 1) {
                     // 模拟停顿 2s
