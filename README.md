@@ -49,8 +49,6 @@ exports.main = async (event, context) => {
 4. 配置云函数服务
 
 ![img_2.png](assets/cloud-option-2.png)
-   
-![腾讯云函数](assets/cloud-tencent.png)
 
 ![img_3.png](assets/cloud-option-3.png)
 
