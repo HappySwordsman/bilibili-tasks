@@ -41,3 +41,12 @@ exports.main = async (event, context) => {
 
 ![腾讯云函数](assets/cloud-tencent.png)
 
+_关于腾讯云函数时间显示不准确问题_
+
+设置函数配置的环境变量
+
+```
+TZ=Asia/Shanghai
+```
+
+![云函数环境配置](assets/cloud-tencent-env.png)
